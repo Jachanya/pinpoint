@@ -120,6 +120,8 @@ function renderPlaces(places) {
                     container.parentElement.removeChild(container);
                 }, 1500);
             }
+
+            console.log("I am clicking some shit");
         };
 
         icon.addEventListener('click', clickListener);
