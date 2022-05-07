@@ -62,13 +62,13 @@ function dynamicLoadPlaces(position) {
     let corsProxy = 'https://cors-anywhere.herokuapp.com/';
 
     // Foursquare API
-    let endpoint = `${corsProxy}https://api.foursquare.com/v2/venues/search?intent=checkin
-        &ll=${position.latitude},${position.longitude}
-        &radius=${params.radius}
-        &client_id=${params.clientId}
-        &client_secret=${params.clientSecret}
-        &limit=15
-        &v=${params.version}`;
+    let endpoint = '${corsProxy}https://api.foursquare.com/v2/venues/search?intent=checkin
+        + '&ll=${position.latitude},${position.longitude}' + 
+        '&radius=${params.radius}' + 
+        '&client_id=${params.clientId}' +
+        '&client_secret=${params.clientSecret}' +
+        '&limit=15'+
+        '&v=${params.version}';
     return fetch(endpoint)
         .then((res) => {
             return res.json()
@@ -90,7 +90,7 @@ function renderPlaces(places) {
 
         // add place icon
         const icon = document.createElement('a-image');
-        icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
+        icon.setAttribute('gps-entity-place', 'latitude: ${latitude}; longitude: ${longitude}');
         icon.setAttribute('name', place.name);
         icon.setAttribute('src', '../assets/map-marker.png');
 
