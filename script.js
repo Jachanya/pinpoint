@@ -62,7 +62,7 @@ function dynamicLoadPlaces(position) {
     let corsProxy = 'https://cors-anywhere.herokuapp.com/';
 
     // Foursquare API
-    let endpoint = '${corsProxy}https://api.foursquare.com/v2/venues/search?intent=checkin
+    let endpoint = '${corsProxy}https://api.foursquare.com/v2/venues/search?intent=checkin'
         + '&ll=${position.latitude},${position.longitude}' + 
         '&radius=${params.radius}' + 
         '&client_id=${params.clientId}' +
